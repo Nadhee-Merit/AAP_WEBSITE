@@ -1,5 +1,5 @@
 /* 
-  Ayisha Amma Aatupannai (ஆட்டுப்பண்ணை) - Design System & Styles
+  aayshamaagoatfarm - Design System & Styles
   Earthy, artisanal, high-trust agrarian aesthetic.
   No generic AI neon/futuristic gradients.
 */
@@ -149,6 +149,21 @@ a {
   display: flex;
   align-items: center;
   gap: 12px;
+}
+
+.brand-logo-img {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(34, 66, 41, 0.25);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: var(--transition-smooth);
+}
+
+.brand:hover .brand-logo-img {
+  transform: scale(1.05);
+  border-color: var(--color-forest);
 }
 
 .brand-symbol {
@@ -340,18 +355,166 @@ a {
   color: var(--color-forest);
 }
 
-/* Glass & Summary Card in Hero */
-.summary-card {
+/* Glass & Summary Card in Hero / Section 2 */
+.summary-card,
+.hero-showcase-card,
+.full-schedule-card {
   background-color: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
-  padding: 30px;
+  padding: 32px;
   box-shadow: var(--shadow-card);
   transition: var(--transition-smooth);
 }
 
-.summary-card:hover {
+.summary-card:hover,
+.hero-showcase-card:hover,
+.full-schedule-card:hover {
   box-shadow: var(--shadow-hover);
+}
+
+/* Hero Showcase Card */
+.hero-showcase-card {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(145deg, #FFFFFF 0%, #F9F7F3 100%);
+  border: 1px solid rgba(34, 66, 41, 0.15);
+  text-align: center;
+}
+
+.hero-logo-display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.showcase-logo-img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 10px 24px rgba(34, 66, 41, 0.15);
+  border: 4px solid #FFFFFF;
+  transition: var(--transition-smooth);
+}
+
+.showcase-logo-img:hover {
+  transform: scale(1.04) rotate(1deg);
+  box-shadow: 0 14px 30px rgba(34, 66, 41, 0.22);
+}
+
+.showcase-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #EBF3ED;
+  color: var(--color-forest);
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  font-size: 0.82rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+.hero-showcase-card h3 {
+  font-size: 1.35rem;
+  color: var(--color-forest);
+  margin-bottom: 12px;
+  font-family: var(--font-serif);
+}
+
+.showcase-text {
+  font-size: 0.94rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.showcase-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 22px;
+  padding: 16px 0;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.s-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.s-stat strong {
+  font-size: 1.15rem;
+  color: var(--color-forest);
+  font-family: var(--font-serif);
+}
+
+.s-stat span {
+  font-size: 0.74rem;
+  color: var(--color-text-muted);
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.showcase-highlight {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.82rem;
+  color: var(--color-ochre);
+  font-weight: 600;
+}
+
+.highlight-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--color-ochre);
+  box-shadow: 0 0 0 3px rgba(192, 125, 43, 0.25);
+}
+
+/* Schedule Showcase Section (Section 2) */
+.schedule-showcase-section {
+  background-color: #F8F5F0;
+  border-bottom: 1px solid var(--color-border);
+  padding: 72px 0;
+}
+
+.schedule-timeline-container {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.full-schedule-card {
+  padding: 36px 40px;
+}
+
+.expanded-timeline .t-item {
+  grid-template-columns: 120px 1fr;
+  gap: 20px;
+}
+
+.expanded-timeline .t-body strong {
+  font-size: 1rem;
+}
+
+.expanded-timeline .t-body p {
+  font-size: 0.88rem;
+}
+
+.text-link {
+  color: var(--color-forest);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.text-link:hover {
+  color: var(--color-terracotta);
 }
 
 .card-header {
@@ -1012,6 +1175,21 @@ a {
   gap: 48px;
   padding-bottom: 40px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-brand-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.footer-logo-img {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 .footer-desc {
